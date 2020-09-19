@@ -1,6 +1,11 @@
 package com.fan.config;
 
 import com.fan.bean.FanHongYang;
+import com.fan.bean.ForImportBean;
+import com.fan.condition.FanCondition;
+import com.fan.condition.FanFactoryBean;
+import com.fan.condition.FanImportBeanDefinitionRegistrar;
+import com.fan.condition.FanImportSelector;
 import org.springframework.context.annotation.*;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
@@ -43,11 +48,20 @@ public class  FanConfig {
      * 		1）、默认获取到的是工厂bean调用getObject创建的对象
      * 		2）、要获取工厂Bean本身，我们需要给id前面加一个&
      * 			&colorFactoryBean
+     *
+     *
      */
+    @Conditional({FanCondition.class})
     @Bean(value = "yang")
     public FanHongYang fanHongYang() {
         return new FanHongYang("樊红羊不要脸","女");
     }
+
+    @Bean
+    public FanFactoryBean fanFactoryBean() {
+        return new FanFactoryBean();
+    }
+
 }
 
 

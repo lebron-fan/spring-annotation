@@ -3,6 +3,9 @@ package com.fan.config;
 import com.fan.bean.BeanLifeCycleMethod1;
 import com.fan.bean.BeanLifeCycleMethod2;
 import com.fan.bean.BeanLifeCycleMethod3;
+import com.fan.bean.ForImportBean;
+import com.fan.condition.FanImportBeanDefinitionRegistrar;
+import com.fan.condition.FanImportSelector;
 import org.springframework.context.annotation.*;
 
 /*
@@ -10,6 +13,7 @@ import org.springframework.context.annotation.*;
 * */
 @Configuration
 @ComponentScan(value = "com.fan.bean")
+@Import(value = {FanImportBeanDefinitionRegistrar.class, FanImportSelector.class, ForImportBean.class})
 public class BeanLifeCycleConfig {
 
 

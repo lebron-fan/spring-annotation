@@ -1,16 +1,13 @@
 package com.fan.config;
 
 import com.fan.bean.FanHongYang;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.ComponentScans;
-import org.springframework.context.annotation.FilterType;
+import org.springframework.context.annotation.*;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Service;
 
 //声明为配置类
-@Component
+@Configuration
 //@ComponentScan(value = {"com.fan"},excludeFilters = {
 //        @ComponentScan.Filter(type = FilterType.ANNOTATION,value = {Controller.class})
 //})

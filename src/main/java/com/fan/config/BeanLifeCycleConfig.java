@@ -13,6 +13,7 @@ import org.springframework.context.annotation.*;
 * */
 @Configuration
 @ComponentScan(value = "com.fan.bean")
+@Profile(value = "test")
 @Import(value = {FanImportBeanDefinitionRegistrar.class, FanImportSelector.class, ForImportBean.class})
 public class BeanLifeCycleConfig {
 

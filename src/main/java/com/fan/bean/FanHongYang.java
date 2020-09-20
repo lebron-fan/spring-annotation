@@ -1,9 +1,15 @@
 package com.fan.bean;
 
+import org.springframework.beans.factory.annotation.Value;
+
 import java.util.Objects;
 
 public class FanHongYang {
+
+    @Value("樊红羊二比")
     private String name;
+
+    @Value("不男不女")
     private String gender;
 
     public String getName() {

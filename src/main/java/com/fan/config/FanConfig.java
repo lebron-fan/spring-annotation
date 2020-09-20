@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 
 //声明为配置类
 @Configuration
+@Profile(value = "test")
 //@ComponentScan(value = {"com.fan"},excludeFilters = {
 //        @ComponentScan.Filter(type = FilterType.ANNOTATION,value = {Controller.class})
 //})
